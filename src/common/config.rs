@@ -6,7 +6,6 @@ pub const DEFAULT_DB_IO_SIZE: u32 = 16; // starting size of file on the disk
 pub const LOG_BUFFER_SIZE: u32 = (BUFFER_POOL_SIZE + 1) * BUSTUB_PAGE_SIZE; // size of log buffer in bytes
 pub const INITIAL_PAGE_CAPACITY: u32 = 1024;
 
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct PageId(NonZeroU32);
 
@@ -20,7 +19,6 @@ impl PageId {
         self.0.get() - 1
     }
 }
-
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct FrameId(NonZeroU32);
